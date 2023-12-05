@@ -77,7 +77,7 @@ inline void appendPrefix(const std::string & tf_prefix, std::string & frame_id)
   }
 
   // If we do have a tf prefix, then put a slash in between
-  if (!tf_prefix.empty()) {
+  if (frame_id != "map" && !tf_prefix.empty()) {
     frame_id = tf_prefix.substr(tf_prefix_index) + "/" + frame_id.substr(frame_id_prefix_index);
   }
 }
